@@ -15,6 +15,7 @@ class Menu(models.Model):
     slug = AutoSlugField(populate_from='title_format')
     content = RichTextField(blank=True, null=True)
     language = models.CharField(max_length=5, choices=LANGUAGE_CODE)
+    active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.title
@@ -28,6 +29,7 @@ class Post(models.Model):
     slug = AutoSlugField(populate_from='title_format')
     content = RichTextField(blank=True, null=True)
     language = models.CharField(max_length=5, choices=LANGUAGE_CODE)
+    active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.title
