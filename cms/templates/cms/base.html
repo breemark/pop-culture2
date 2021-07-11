@@ -39,12 +39,24 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">{% trans "Logout" %}</a>
               </li>
+              {% get_current_language as LANGUAGE_CODE %}
+              {% if LANGUAGE_CODE == "en-us" %}
+                <li class="nav-item">
+                  <a class="nav-link" href="/zh-hans">🇨🇳 中文</a>
+                </li>
+              {% elif LANGUAGE_CODE == "zh-hans" %}
+                <li class="nav-item">
+                  <a class="nav-link" href="/en-us">🇺🇸 English</a>
+                </li>
+              {% endif %}
+
             </ul>
             
         </div>
     </nav>
 
     <div class="container">
+      <div class="m-4"></div>
       {% block content %}
       {% endblock  %}  
     </div>
