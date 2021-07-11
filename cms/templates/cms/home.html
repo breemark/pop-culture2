@@ -1,5 +1,10 @@
 {% extends 'cms/base.html' %}
+{% load i18n %}
 
 {% block content%}
-<h1>Home<h1>
+<h1>{% trans "Home" %}<h1>
+
+{% get_current_language as LANGUAGE_CODE %}
+LANGUAGE CODE: {{ LANGUAGE_CODE }}
+
 {% endblock %}
