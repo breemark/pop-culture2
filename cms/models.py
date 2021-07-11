@@ -7,14 +7,14 @@ from unidecode import unidecode
 
 LANGUAGE_CODE = (
     ('en-us', 'English'),
-    ('zh-cn', 'Simplified Chinese'),
+    ('zh-hans', 'Chinese'),
 )
 
 class Menu(models.Model):
     title = models.CharField(max_length=30)
     slug = AutoSlugField(populate_from='title_format')
     content = RichTextField(blank=True, null=True)
-    language = models.CharField(max_length=5, choices=LANGUAGE_CODE)
+    language = models.CharField(max_length=7, choices=LANGUAGE_CODE)
     active = models.BooleanField(default=True)
 
     def __str__(self):
@@ -28,7 +28,7 @@ class Post(models.Model):
     title = models.CharField(max_length=30)
     slug = AutoSlugField(populate_from='title_format')
     content = RichTextField(blank=True, null=True)
-    language = models.CharField(max_length=5, choices=LANGUAGE_CODE)
+    language = models.CharField(max_length=7, choices=LANGUAGE_CODE)
     active = models.BooleanField(default=True)
 
     def __str__(self):
