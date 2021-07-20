@@ -1,0 +1,25 @@
+{% extends 'cms/base.html'%}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+
+<h1>Your Profile</h1>
+<hr>
+{% if user.is_authenticated %}
+
+    <div class="float-right">
+        <img src="{% static user.userprofile.avatar %}" class="avatar">
+    </div>
+
+    <p>Name: {{ user.first_name }} {{ user.last_name }}</p>
+    <p>Username: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Role: {{ user.userprofile.role }}</p>
+    <p>Bio: {{ user.userprofile.description }}</p>
+
+
+
+{% endif %}
+
+{% endblock %}

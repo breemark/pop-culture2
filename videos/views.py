@@ -56,3 +56,7 @@ def logout_user(request):
     logout(request)
     messages.success(request, ('User successfully Logged out!'))
     return redirect('home')
+
+
+def profile_user(request):
+    return render(request, 'profile/home.html', {})
