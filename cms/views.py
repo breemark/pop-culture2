@@ -35,8 +35,8 @@ def job_content(request, job_slug):
 
 
 def job_listing(request):
-    job_list = Post.objects.all()
-    paginator = Paginator(job_list, 10) # Show 25 jobs per page.
+    job_list = Post.objects.get_queryset().order_by('id')
+    paginator = Paginator(job_list, 10) # Show 10 jobs per page.
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)

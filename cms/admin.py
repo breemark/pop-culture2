@@ -3,7 +3,7 @@ from .models import Post, Menu
 
 # Register your models here.
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'language', 'active', )
+    list_display = ('title', 'language', 'active', 'created')
 
 admin.site.register(Post, PostAdmin)
 

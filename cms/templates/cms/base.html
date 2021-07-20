@@ -35,13 +35,13 @@
 
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                  <a class="nav-link" href="#">{% trans "Login" %}</a>
+                  <a class="nav-link" href="/{{language}}/login/">{% trans "Login" %}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">{% trans "Register" %}</a>
+                <a class="nav-link" href="/{{language}}/register/">{% trans "Register" %}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">{% trans "Logout" %}</a>
+                <a class="nav-link" href="/{{language}}/logout/">{% trans "Logout" %}</a>
               </li>
               {% if language == "en-us" %}
                 <li class="nav-item">
