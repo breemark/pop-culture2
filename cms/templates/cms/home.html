@@ -8,13 +8,13 @@
     </div>
     <div class="col-sm-3">
         <div class="pt-5 list-group">
-            <h3 class="text-center">Latest jobs</h3>
-            <a href="#" class="list-group-item list-group-item-action">English Teacher in Chongqing</a>
-            <a href="#" class="list-group-item list-group-item-action">Spanish Teacher in Guangzhou</a>
-            <a href="#" class="list-group-item list-group-item-action">Japanese Teacher in Liaoning</a>
-            <a href="#" class="list-group-item list-group-item-action">English Teacher in Shenzhen</a>
-            <a href="#" class="list-group-item list-group-item-action">Russian Language Teacher in Chengdu</a>
-            <h5 class="pt-2 text-center"><a href="#">More jobs</a></h5>
+            {% if jobs %}
+                <h3 class="text-center">Latest jobs</h3>
+                {% for job in jobs %}
+                    <a href="/{{language}}/posts/{{job.slug }}" class="list-group-item list-group-item-action">{{ job.title }}</a>
+                {% endfor %}
+                <h5 class="pt-2 text-center"><a href="/{{language}}/posts/">More jobs</a></h5>
+            {% endif %}
         </div>
     </div>
 </div>

@@ -2,7 +2,11 @@
 
 {% block content%}
 
-<h1>Post<h1>
-<h2>Back home</h2>
+<div class="row">
+    <h2 class="p-2">Job Title: {{job.title}}<h2> 
+</div>
+
+    {{job.content|safe }}
+
 
 {% endblock %}

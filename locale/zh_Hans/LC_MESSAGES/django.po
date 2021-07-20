@@ -20,24 +20,24 @@ msgstr ""
 
 #: cms/templates/cms/base.html:34
 msgid "Login"
-msgstr "你好"
+msgstr "登录"
 
 #: cms/templates/cms/base.html:37
 msgid "Register"
-msgstr "你好"
+msgstr "登记"
 
 #: cms/templates/cms/base.html:40
 msgid "Logout"
-msgstr "你好"
+msgstr "登出"
 
 #: cms/templates/cms/home.html:5
 msgid "Home"
-msgstr "你好"
+msgstr "主页"
 
 #: popculture/settings.py:106
 msgid "English"
-msgstr "你好"
+msgstr "英语"
 
 #: popculture/settings.py:107
 msgid "Chinese"
-msgstr "你好"
+msgstr "中文"

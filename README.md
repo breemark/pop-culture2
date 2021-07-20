@@ -10,3 +10,4 @@ Top secret. Always use a requirements.txt file
 5. Post Page. Each Post has an individual page
 6. Then do the Videos thing
 7. When the user registers, give him a choice to decide his role (teacher, school)
+8. You may want to create a seeder for the 2 mainpages 
