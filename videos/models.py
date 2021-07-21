@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.db.models.deletion import CASCADE
+from phonenumber_field.modelfields import PhoneNumberField
+from django_countries.fields import CountryField
 
 
 # Create your models here.
@@ -21,7 +23,11 @@ class UserProfile(models.Model):
     description = models.TextField(null=True, blank=True)
     role = models.CharField(max_length=1, choices=USER_ROLES)
     authorized = models.BooleanField(default=False)
-    avatar = models.ImageField(default='avatar.png', upload_to='avatars')
+    active = models.BooleanField(default=True)
+    avatar = models.ImageField(default='avatar.png', upload_to='avatars') # TODO is this necessary?
+    wechat = models.CharField(max_length=100, null=True, blank=True)
+    phone = PhoneNumberField(unique = True, null = True, blank = True) # Here
+    country = CountryField(blank_label='(select country)')
 
 
     def __str___(self):

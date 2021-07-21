@@ -10,6 +10,8 @@
 
     <div class="float-right">
         <img src="{% static user.userprofile.avatar %}" class="avatar">
+        <img src="{{ user.userprofile.avatar }}" class="avatar">
+
     </div>
 
     <p>Name: {{ user.first_name }} {{ user.last_name }}</p>

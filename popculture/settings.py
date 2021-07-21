@@ -32,6 +32,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'cms',
     'videos',
+    'phonenumber_field',
+    'django_countries',
 ]
 
 MIDDLEWARE = [
