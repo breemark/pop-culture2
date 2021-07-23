@@ -32,3 +32,9 @@ class UserProfileForm(forms.ModelForm):
 
         self.fields['role'].widget.attrs['class'] = 'form-control'
         self.fields['country'].widget.attrs['class'] = 'form-control'
+
+
+class VideoForm(forms.ModelForm):
+    class Meta:
+        model= UserProfile
+        fields= ["video",]

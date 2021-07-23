@@ -28,6 +28,7 @@ class UserProfile(models.Model):
     wechat = models.CharField(max_length=100, null=True, blank=True)
     phone = PhoneNumberField(unique = True, null = True, blank = True) # Here
     country = CountryField(blank_label='(select country)')
+    video = models.FileField(blank=True, null=True, upload_to='videos/')
 
 
     def __str___(self):

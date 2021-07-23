@@ -8,3 +8,5 @@ urlpatterns = [
     path('profile/', views.profile_user, name="profile"),
 
 ]
+
+

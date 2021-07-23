@@ -59,4 +59,23 @@ def logout_user(request):
 
 
 def profile_user(request):
-    return render(request, 'profile/home.html', {})
+    """ Displays the user profile"""
+    if request.method == 'POST': 
+         
+        video = request.FILES['video']
+        print(video)
+        teacher_profile = UserProfile.objects.get(user_id=request.user.id)
+        teacher_profile.video = video
+
+        teacher_profile.save()
+
+        return redirect('home')
+    else:
+        return render(request, 'profile/home.html', {})
+
+
+     
+    
+     
+ 
+ 

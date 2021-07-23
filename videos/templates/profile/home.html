@@ -10,7 +10,6 @@
 
     <div class="float-right">
         <img src="{% static user.userprofile.avatar %}" class="avatar">
-        <img src="{{ user.userprofile.avatar }}" class="avatar">
 
     </div>
 
@@ -19,7 +18,17 @@
     <p>Email: {{ user.email }}</p>
     <p>Role: {{ user.userprofile.role }}</p>
     <p>Bio: {{ user.userprofile.description }}</p>
+    <video width="500" height="500" controls >
+        <source src="/media/{{ user.userprofile.video }}" type="video/mp4">
+    </video>
 
+
+    <form action="" enctype="multipart/form-data" method="POST">{% csrf_token %}
+ 
+        <input type="file" name="video" accept="video/*">
+        <button type="submit"> Upload New Video </button>
+     
+    </form>
 
 
 {% endif %}

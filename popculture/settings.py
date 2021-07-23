@@ -60,6 +60,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'cms.context_processor.menus_processor',
             ],
         },
@@ -129,3 +130,10 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
+
+# MEDIA FILES
+
+MEDIA_ROOT= BASE_DIR / "media"
+ 
+MEDIA_URL ='/media/'
+ 
