@@ -1,35 +1,53 @@
 {% extends 'cms/base.html'%}
 {% load static %}
+{% load i18n %}
 {% block content %}
+
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-
-<h1>Your Profile</h1>
+<h1>{% trans "Your Profile" %}</h1>
 <hr>
 {% if user.is_authenticated %}
 
-    <div class="float-right">
-        <img src="{% static user.userprofile.avatar %}" class="avatar">
+    {% if user.userprofile.avatar %}
+        <div class="float-right">
+            <img src="{% static user.userprofile.avatar %}" class="avatar">
+        </div>
+    {% else %}
+        <div class="float-right">
+            <img src="{% static user.userprofile.avatar %}" class="avatar">
+        </div>
+    {% endif %}
 
-    </div>
+    <p>{% trans "Your Name" %}: {{ user.first_name }} {{ user.last_name }}</p>
+    <p>{% trans "Username" %}: {{ user.username }}</p>
+    <p>{% trans "Email" %}: {{ user.email }}</p>
+    <p>{% trans "Phone" %}: {{ user.userprofile.phone }}</p>
+    <p>{% trans "WeChat" %}: {{ user.userprofile.wechat }}</p>
+    <p>{% trans "Bio" %}: {{ user.userprofile.description }}</p>
 
-    <p>Name: {{ user.first_name }} {{ user.last_name }}</p>
-    <p>Username: {{ user.username }}</p>
-    <p>Email: {{ user.email }}</p>
-    <p>Role: {{ user.userprofile.role }}</p>
-    <p>Bio: {{ user.userprofile.description }}</p>
+
+    <button class=" btn btn-secondary" >{% trans "Edit Profile" %}</button>
+    <br>
+    <hr>
+    <p>{% trans "Video" %}: </p>
+    {% if user.userprofile.video %}
     <video width="500" height="500" controls >
         <source src="/media/{{ user.userprofile.video }}" type="video/mp4">
     </video>
+    {% else %}
+        <p> {% trans "Please Upload a video" %} </p>
+    {% endif %}
 
 
     <form action="" enctype="multipart/form-data" method="POST">{% csrf_token %}
  
-        <input type="file" name="video" accept="video/*">
-        <button type="submit"> Upload New Video </button>
+        <input class="form-control" type="file" name="video" accept="video/*">
+        <br>
+        <button class="btn btn-success " type="submit"> {% trans "Upload video" %} </button>
      
     </form>
-
+    <div class="row p-5"></div>
 
 {% endif %}
 

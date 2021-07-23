@@ -24,15 +24,11 @@ class UserProfile(models.Model):
     role = models.CharField(max_length=1, choices=USER_ROLES)
     authorized = models.BooleanField(default=False)
     active = models.BooleanField(default=True)
-    avatar = models.ImageField(default='avatar.png', upload_to='avatars') # TODO is this necessary?
+    avatar = models.ImageField(blank=True, null=True, upload_to='avatars/') 
     wechat = models.CharField(max_length=100, null=True, blank=True)
     phone = PhoneNumberField(unique = True, null = True, blank = True) # Here
     country = CountryField(blank_label='(select country)')
     video = models.FileField(blank=True, null=True, upload_to='videos/')
-
-
-    def __str___(self):
-        return f"profile of the user {self.user.username}"
 
 
     def delete(self, *args, **kwargs):

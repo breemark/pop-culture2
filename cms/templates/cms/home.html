@@ -1,4 +1,6 @@
 {% extends 'cms/base.html' %}
+{% load i18n %}
+
 
 {% block content%}
 
@@ -9,11 +11,11 @@
     <div class="col-sm-3">
         <div class="pt-5 list-group">
             {% if jobs %}
-                <h3 class="text-center">Latest jobs</h3>
+                <h3 class="text-center">{% trans "Latest jobs" %}</h3>
                 {% for job in jobs %}
                     <a href="/{{language}}/posts/{{job.slug }}" class="list-group-item list-group-item-action">{{ job.title }}</a>
                 {% endfor %}
-                <h5 class="pt-2 text-center"><a href="/{{language}}/posts/">More jobs</a></h5>
+                <h5 class="pt-2 text-center"><a href="/{{language}}/posts/">{% trans "More jobs" %}</a></h5>
             {% endif %}
         </div>
     </div>

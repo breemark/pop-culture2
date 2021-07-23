@@ -69,7 +69,7 @@ def profile_user(request):
 
         teacher_profile.save()
 
-        return redirect('home')
+        return redirect('profile')
     else:
         return render(request, 'profile/home.html', {})
 

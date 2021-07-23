@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-11 04:44+0000\n"
+"POT-Creation-Date: 2021-07-24 03:46+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,26 +18,78 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: cms/templates/cms/base.html:34
+#: cms/templates/cms/base.html:44
+msgid "Logout"
+msgstr "注销"
+
+#: cms/templates/cms/base.html:48
 msgid "Login"
 msgstr "登录"
 
-#: cms/templates/cms/base.html:37
+#: cms/templates/cms/base.html:51
 msgid "Register"
-msgstr "登记"
+msgstr "注册"
 
-#: cms/templates/cms/base.html:40
-msgid "Logout"
-msgstr "登出"
+#: cms/templates/cms/home.html:14
+msgid "Latest jobs"
+msgstr "最近的工作"
 
-#: cms/templates/cms/home.html:5
-msgid "Home"
-msgstr "主页"
+#: cms/templates/cms/home.html:18
+msgid "More jobs"
+msgstr "更多工作"
 
-#: popculture/settings.py:106
+#: popculture/settings.py:109
 msgid "English"
 msgstr "英语"
 
-#: popculture/settings.py:107
+#: popculture/settings.py:110
 msgid "Chinese"
 msgstr "中文"
+
+#: popculture/urls.py:12
+msgid "admin/"
+msgstr ""
+
+#: videos/templates/profile/home.html:8
+msgid "Your Profile"
+msgstr "您的个人资料"
+
+#: videos/templates/profile/home.html:22
+msgid "Your Name"
+msgstr "你的名字"
+
+#: videos/templates/profile/home.html:23
+msgid "Username"
+msgstr "用户名"
+
+#: videos/templates/profile/home.html:24
+msgid "Email"
+msgstr "电子邮件"
+
+#: videos/templates/profile/home.html:25
+msgid "Phone"
+msgstr "电话号码"
+
+#: videos/templates/profile/home.html:26
+msgid "WeChat"
+msgstr "微信"
+
+#: videos/templates/profile/home.html:27
+msgid "Bio"
+msgstr "生物"
+
+#: videos/templates/profile/home.html:30
+msgid "Edit Profile"
+msgstr "编辑个人资料"
+
+#: videos/templates/profile/home.html:33
+msgid "Video"
+msgstr "视频"
+
+#: videos/templates/profile/home.html:39
+msgid "Please Upload a video"
+msgstr "请上传视频"
+
+#: videos/templates/profile/home.html:47
+msgid "Upload video"
+msgstr "上传视频"
