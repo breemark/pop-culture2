@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor',
+    'ckeditor_uploader',
     'cms',
     'videos',
     'phonenumber_field',
@@ -137,3 +138,4 @@ MEDIA_ROOT= BASE_DIR / "media"
  
 MEDIA_URL ='/media/'
  
+CKEDITOR_UPLOAD_PATH = 'ckeditor/'

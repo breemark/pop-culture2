@@ -9,7 +9,14 @@
         {{ mainpage.content|safe  }}
     </div>
     <div class="col-sm-3">
-        <div class="pt-5 list-group">
+        <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <div class="card-body">
+              <h4 class="card-title">{% trans "Teachers" %} 🧑‍🏫</h4>
+              <p class="card-text">{% trans "Click here to find teachers." %}</p>
+            </div>
+          </div>
+
+        <div class="pt-1 list-group">
             {% if jobs %}
                 <h3 class="text-center">{% trans "Latest jobs" %}</h3>
                 {% for job in jobs %}

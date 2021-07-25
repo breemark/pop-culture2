@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-24 03:46+0700\n"
+"POT-Creation-Date: 2021-07-24 04:57+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,10 +31,18 @@ msgid "Register"
 msgstr "注册"
 
 #: cms/templates/cms/home.html:14
+msgid "Teachers"
+msgstr "老师"
+
+#: cms/templates/cms/home.html:15
+msgid "Click here to find teachers."
+msgstr "点击这里寻找老师"
+
+#: cms/templates/cms/home.html:21
 msgid "Latest jobs"
 msgstr "最近的工作"
 
-#: cms/templates/cms/home.html:18
+#: cms/templates/cms/home.html:25
 msgid "More jobs"
 msgstr "更多工作"
 
