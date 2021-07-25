@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import SignUpForm, UserProfileForm
 from .models import UserProfile
+from django.core.paginator import Paginator
 
 
 def login_user(request):
@@ -74,8 +75,11 @@ def profile_user(request):
         return render(request, 'profile/home.html', {})
 
 
-     
-    
-     
- 
- 
+def teacher_listing(request):
+    """Show all the available Teachers"""
+    teacher_list = UserProfile.objects.get_queryset().order_by('id')
+    paginator = Paginator(teacher_list, 10) # Show 10 jobs per page.
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'teachers/home.html', {'page_obj': page_obj})

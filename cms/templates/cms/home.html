@@ -1,5 +1,6 @@
 {% extends 'cms/base.html' %}
 {% load i18n %}
+{% load static %}
 
 
 {% block content%}
@@ -9,12 +10,14 @@
         {{ mainpage.content|safe  }}
     </div>
     <div class="col-sm-3">
-        <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-            <div class="card-body">
-              <h4 class="card-title">{% trans "Teachers" %} 🧑‍🏫</h4>
-              <p class="card-text">{% trans "Click here to find teachers." %}</p>
+        <a class="teachers-link-box" href="/{{language}}/teachers/">
+            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                <div class="card-body">
+                <h4 class="card-title"><strong>{% trans "Teachers" %} 🧑‍🏫</strong></h4>
+                <p class="card-text"><strong>{% trans "Click here to find teachers." %}</strong></p>
+                </div>
             </div>
-          </div>
+        </a>
 
         <div class="pt-1 list-group">
             {% if jobs %}
