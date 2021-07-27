@@ -1,10 +1,27 @@
-{% extends 'cms/base.html'%}
-{% load static %}
+{% extends 'cms/base.html' %}
 {% load i18n %}
-{% block content %}
 
+{% block content %}
 
 <h1>{% trans "Edit Profile" %}</h1>
 
+
+<form action="/{{language}}/profile/edit/" enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    {% if form.errors %}
+    
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+         Your form has errors
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    
+    {% endif %}
+
+    {{ form }}
+
+    <input type="submit" value="Save" class="btn btn-secondary">
+</form>
 
 {% endblock %}

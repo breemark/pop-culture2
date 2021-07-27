@@ -34,7 +34,8 @@ class UserProfileForm(forms.ModelForm):
         self.fields['country'].widget.attrs['class'] = 'form-control'
 
 
-class VideoForm(forms.ModelForm):
+class UserBioForm(forms.ModelForm):
+    
     class Meta:
-        model= UserProfile
-        fields= ["video",]
+        model = UserProfile
+        fields = ('description', 'active','avatar','wechat','phone','country',)

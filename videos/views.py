@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from .forms import SignUpForm, UserProfileForm
+from .forms import SignUpForm, UserProfileForm, UserBioForm
 from .models import UserProfile
 from django.core.paginator import Paginator
 
@@ -76,7 +76,19 @@ def profile_user(request):
 
 
 def edit_profile_user(request):
-    return render(request, 'profile/edit.html', {})
+    if request.method == 'POST':
+        form = UserBioForm(request.POST, request.FILES, instance=request.user.userprofile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, ('You have edited your profile'))
+            return redirect('profile')
+
+    else:
+        form = UserBioForm(instance=request.user.userprofile)
+
+        context = {'form':form}
+
+    return render(request, 'profile/edit.html', context)
 
 
 # Teachers Operations
