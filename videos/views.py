@@ -75,6 +75,12 @@ def profile_user(request):
         return render(request, 'profile/home.html', {})
 
 
+def edit_profile_user(request):
+    return render(request, 'profile/edit.html', {})
+
+
+# Teachers Operations
+
 def teacher_listing(request):
     """Show all the available Teachers"""
     teacher_list = UserProfile.objects.get_queryset().order_by('id')
@@ -83,3 +89,5 @@ def teacher_listing(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'teachers/home.html', {'page_obj': page_obj})
+
+

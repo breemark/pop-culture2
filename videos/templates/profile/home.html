@@ -27,7 +27,8 @@
     <p>{% trans "Bio" %}: {{ user.userprofile.description }}</p>
 
 
-    <button class=" btn btn-secondary" >{% trans "Edit Profile" %}</button>
+    <a class=" btn btn-secondary" href="/{{language}}/profile/edit/">{% trans "Edit Profile" %}</a>
+
     <br>
     <hr>
     <p>{% trans "Video" %}: </p>
