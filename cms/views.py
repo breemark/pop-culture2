@@ -6,7 +6,6 @@ from django.core.paginator import Paginator
 
 
 
-
 # Create your views here.
 def home(request):
     # Get Language Code

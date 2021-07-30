@@ -1,8 +1,10 @@
 {% extends 'cms/base.html'%}
+{% load i18n %}
+
 
 {% block content %}
     
-    <h1 class="text-center">Login</h1>
+    <h1 class="text-center">{% trans "Login" %}</h1>
 
     <div class="col-md-6 offset-md-3">
         <form method="post">
@@ -16,7 +18,7 @@
                 <input type="password" class="form-control" placeholder="Enter Password" name="password">
             </div>
 
-            <button type="submit" class="btn btn-secondary">Login</button>
+            <button type="submit" class="btn btn-secondary">{% trans "Login" %}</button>
 
         </form>
     </div>

@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'videos',
     'phonenumber_field',
     'django_countries',
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 MIDDLEWARE = [
