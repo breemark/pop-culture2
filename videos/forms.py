@@ -2,6 +2,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
 from .models import UserProfile
+from django.utils.translation import ugettext_lazy
+
 
 class SignUpForm(UserCreationForm):
     email = forms.EmailField(widget=forms.TextInput(attrs={'class':'form-control'}))
@@ -35,7 +37,19 @@ class UserProfileForm(forms.ModelForm):
 
 
 class UserBioForm(forms.ModelForm):
+    active = forms.BooleanField(label= ugettext_lazy('Are you currently searching for jobs?'), widget=forms.CheckboxInput(attrs={'class':'actively-searching p-5',}))
     
     class Meta:
         model = UserProfile
-        fields = ('description', 'active','avatar','wechat','phone','country',)
+        fields = ('avatar', 'description','wechat','phone','country', 'active', )
+
+    def __init__(self, *args, **kwargs):
+        super(UserBioForm, self).__init__(*args, **kwargs)
+
+        self.fields['avatar'].widget.attrs['class'] = 'form-control'
+        self.fields['description'].widget.attrs['class'] = 'form-control'
+        self.fields['wechat'].widget.attrs['class'] = 'form-control'
+        self.fields['phone'].widget.attrs['class'] = 'form-control'
+        self.fields['country'].widget.attrs['class'] = 'form-control pb-5'
+
+

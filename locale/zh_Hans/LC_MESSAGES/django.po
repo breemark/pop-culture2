@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-24 04:57+0700\n"
+"POT-Creation-Date: 2021-07-31 17:38+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,45 +18,58 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: cms/templates/cms/base.html:44
+#: cms/templates/cms/base.html:45
 msgid "Logout"
 msgstr "注销"
 
-#: cms/templates/cms/base.html:48
+#: cms/templates/cms/base.html:49 videos/templates/auth/login.html:7
+#: videos/templates/auth/login.html:21
 msgid "Login"
 msgstr "登录"
 
-#: cms/templates/cms/base.html:51
+#: cms/templates/cms/base.html:52 videos/templates/auth/register.html:25
 msgid "Register"
 msgstr "注册"
 
-#: cms/templates/cms/home.html:14
+#: cms/templates/cms/home.html:16
 msgid "Teachers"
 msgstr "老师"
 
-#: cms/templates/cms/home.html:15
+#: cms/templates/cms/home.html:17
 msgid "Click here to find teachers."
 msgstr "点击这里寻找老师"
 
-#: cms/templates/cms/home.html:21
+#: cms/templates/cms/home.html:24
 msgid "Latest jobs"
 msgstr "最近的工作"
 
-#: cms/templates/cms/home.html:25
+#: cms/templates/cms/home.html:28
 msgid "More jobs"
 msgstr "更多工作"
 
-#: popculture/settings.py:109
+#: popculture/settings.py:111
 msgid "English"
 msgstr "英语"
 
-#: popculture/settings.py:110
+#: popculture/settings.py:112
 msgid "Chinese"
 msgstr "中文"
 
-#: popculture/urls.py:12
-msgid "admin/"
+#: videos/forms.py:40
+msgid "Are you currently searching for jobs?    "
+msgstr "您目前正在寻找工作吗？    "
+
+#: videos/templates/auth/register.html:6
+msgid "Create a new account"
 msgstr ""
+
+#: videos/templates/auth/register.html:13
+msgid "Your form has errors"
+msgstr ""
+
+#: videos/templates/profile/edit.html:6 videos/templates/profile/home.html:30
+msgid "Edit Profile"
+msgstr "编辑个人资料"
 
 #: videos/templates/profile/home.html:8
 msgid "Your Profile"
@@ -86,18 +99,14 @@ msgstr "微信"
 msgid "Bio"
 msgstr "生物"
 
-#: videos/templates/profile/home.html:30
-msgid "Edit Profile"
-msgstr "编辑个人资料"
-
-#: videos/templates/profile/home.html:33
+#: videos/templates/profile/home.html:34
 msgid "Video"
 msgstr "视频"
 
-#: videos/templates/profile/home.html:39
+#: videos/templates/profile/home.html:40
 msgid "Please Upload a video"
 msgstr "请上传视频"
 
-#: videos/templates/profile/home.html:47
+#: videos/templates/profile/home.html:48
 msgid "Upload video"
 msgstr "上传视频"

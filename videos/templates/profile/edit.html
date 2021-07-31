@@ -1,10 +1,12 @@
 {% extends 'cms/base.html' %}
 {% load i18n %}
+{% load static %}
+
 
 {% block content %}
 
 <h1>{% trans "Edit Profile" %}</h1>
-
+<hr>
 
 <form action="/{{language}}/profile/edit/" enctype="multipart/form-data" method="POST">
     {% csrf_token %}
@@ -21,6 +23,10 @@
 
     {{ form }}
 
+   
+
+      <br>
+      <br>
     <input type="submit" value="Save" class="btn btn-secondary">
 </form>
 

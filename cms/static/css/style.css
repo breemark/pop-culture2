@@ -18,3 +18,8 @@ footer {
 strong {
     display: inline-block;
 }
+
+.actively-searching {
+    width: 60px;
+    height: 25px;
+}

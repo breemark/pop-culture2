@@ -9,7 +9,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = i18n_patterns(
-    path(_('admin/'), admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include('cms.urls')),
     path('', include('videos.urls')),
     path('ckeditor', include('ckeditor_uploader.urls')),
